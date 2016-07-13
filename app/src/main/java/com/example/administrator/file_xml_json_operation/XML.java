@@ -55,10 +55,7 @@ public class XML
     public Profile read(Context context) throws Exception
     {
         InputStream inputStream = context.getResources().getAssets().open("profile.xml", Context.MODE_PRIVATE);
-
-        XmlPullParserFactory xmlPullParserFactory = XmlPullParserFactory.newInstance();
-        XmlPullParser xmlPullParser = xmlPullParserFactory.newPullParser();
-
+        XmlPullParser xmlPullParser = Xml.newPullParser();
         xmlPullParser.setInput(inputStream, "utf-8");
         Profile profile = new Profile();
 
